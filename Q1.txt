@@ -1,0 +1,32 @@
+n = 1
+n = int(input("Enter the  no."))
+if n <= 0:
+    print("invalid no")
+
+else:
+    ti = 1
+    tiplus1 = 2
+    tiplus2 = 4
+    res = 1
+    if n == 1:
+        res = 1
+    elif n == 2:
+        res = 2
+    elif n == 3:
+        res = 4
+    else:
+        tiplus3 = 4
+        x = 4
+        while x <= n:
+            # after each iteration the Value of ti,tipluse1 and tipluse2 will change
+            tiplus3 = ti + tiplus1 + tiplus2
+            ti = tiplus1
+            tiplus1 = tiplus2
+            tiplus2 = tiplus3
+            x = x + 1
+        else:
+            pass
+
+        res = tiplus3
+
+    print(res)
